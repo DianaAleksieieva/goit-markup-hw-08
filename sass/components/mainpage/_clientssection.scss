@@ -1,0 +1,73 @@
+/* Clients section */
+.clients-list {
+  padding-bottom: 94px;
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (min-width: 481px) {
+    margin-left: calc(-1 * 30px);
+  }
+
+  &__items {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    height: 90px;
+
+    flex-basis: calc(100% / 2 - var(--set-gap));
+    @media screen and (min-width: 481px) {
+      flex-basis: calc(100% / 3 - var(--set-gap));
+    }
+    @media screen and (min-width: 1201px) {
+      flex-basis: calc(100% / 6 - var(--set-gap));
+    }
+  }
+  &__items {
+    margin-left: var(--set-gap);
+  }
+  &__link {
+    color: var(--icon-color);
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    @include transition(color);
+    @include transition(solid);
+  }
+  &__link:hover,
+  &__link:focus {
+    color: var(--brand-color);
+    border: 1px solid var(--brand-color);
+  }
+}
+.icon-logo-1 {
+  width: 44.27px;
+  height: 49.23px;
+  fill: currentColor;
+}
+.icon-logo-2 {
+  width: 40px;
+  height: 52px;
+  fill: currentColor;
+}
+.icon-logo-3 {
+  width: 41px;
+  height: 42.6px;
+  fill: currentColor;
+}
+.icon-logo-4 {
+  width: 79.66px;
+  height: 42.02px;
+  fill: currentColor;
+}
+.icon-logo-5 {
+  width: 59px;
+  height: 47px;
+  fill: currentColor;
+}
+.icon-logo-6 {
+  width: 88.48px;
+  height: 45.44px;
+  fill: currentColor;
+}

@@ -1,0 +1,65 @@
+.container {
+  max-width: 450px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media screen and (min-width: 481px) {
+    max-width: 738px;
+  }
+  @media screen and (min-width: 1201px) {
+    max-width: 1200px;
+  }
+}
+/* Стиль логотипа */
+
+.logo {
+  font-size: 26px;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--black-color);
+  @media screen and (min-width: 1201px) {
+    margin-right: 93px;
+  }
+  &__text {
+    margin: 0;
+  }
+  &--accent {
+    color: var(--brand-color);
+    font-weight: 700;
+  }
+  &--inverse {
+    font-size: 26px;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--white-color);
+  }
+
+  &__footer {
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+}
+.button {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-decoration: none;
+}
+.gereral-section-title {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  margin: 0;
+  font-size: 28px;
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+  }
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

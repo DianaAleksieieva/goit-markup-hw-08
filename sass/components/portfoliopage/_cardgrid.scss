@@ -1,0 +1,101 @@
+/* Portfolio сетка */
+.card-grid {
+  // display: flex;
+  // flex-wrap: wrap;
+  // margin-left: calc(-1 * 30px);
+  // margin-top: calc(-1 * 30px);
+
+  &__picture {
+    display: block;
+    max-width: 100%;
+  }
+
+  &__item {
+    position: relative;
+
+    // flex-basis: calc(100% / 3 - var(--set-gap));
+    // margin-left: var(--set-gap);
+    // margin-top: var(--set-gap);
+    border: 1px solid #eeeeee;
+
+    transition: 250ms var(--timing-function);
+    @media screen and (max-width: 480px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__item:first-child {
+    margin-top: 40px;
+  }
+  &__item:hover,
+  &__item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    color: var(--second-color);
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+}
+.card-grid .card-text {
+  margin: 30px 24px;
+}
+
+.card-grid .product-thumb {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.card-grid .card-overlay {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0, 5;
+
+  transform: translateY(100%);
+
+  transition: 250ms var(--timing-function);
+  overflow: hidden;
+}
+
+.card-grid__item:hover .card-overlay,
+.card-grid__item:focus .card-overlay {
+  transform: translateY(0%);
+}
+
+.card-grid .card-overlay::before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  width: 100%;
+  min-height: 294px;
+  top: 0;
+  left: 0;
+  background-color: var(--brand-color);
+  opacity: 0.9;
+}
+.card-overlay {
+  &__text {
+    z-index: 6;
+    position: relative;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--white-color);
+    padding: 63px 24px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,161 @@
+header {
+  min-height: 60px;
+  border-bottom: 1px solid #ececec;
+
+  @media screen and (min-width: 481px) {
+    min-height: 80px;
+  }
+}
+
+.container-header {
+  @media screen and (min-width: 481px) {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.icon-envelope {
+  display: none;
+  @media screen and (min-width: 481px) {
+    display: block;
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+.icon-phone {
+  display: none;
+  @media screen and (min-width: 481px) {
+    display: block;
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+
+/* Стиль навигация */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  @media screen and (min-width: 481px) {
+    width: 100%;
+    line-height: 1.14;
+    min-height: 81px;
+  }
+  @media screen and (min-width: 1201px) {
+    width: 0%;
+  }
+  &__list {
+    display: none;
+    @media screen and (min-width: 481px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__item:not(:last-child) {
+    @media screen and (min-width: 481px) {
+      display: block;
+      margin-right: 50px;
+    }
+  }
+  &__link {
+    display: block;
+    color: var(--black-color);
+    text-decoration: none;
+    -webkit-transition: 250ms var(--timing-function);
+    transition: 250ms var(--timing-function);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--brand-color);
+  }
+
+  &__link--current {
+    color: var(--brand-color);
+    position: relative;
+  }
+
+  &__link--current::after {
+    content: '';
+    display: inline-block;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: var(--brand-color);
+    position: absolute;
+    left: 0;
+    bottom: -34px;
+  }
+}
+
+// Мобильное меню
+.mobile-menu-icon {
+  width: 40px;
+  height: 40px;
+  @media screen and (min-width: 481px) {
+    display: none;
+  }
+}
+
+.menu-open-button {
+  background-color: transparent;
+  border: 0;
+  @media screen and (min-width: 481px) {
+    display: none;
+  }
+  @media screen and (min-width: 481px) {
+    display: flex;
+  }
+}
+
+// Desctop and table menu
+.header-contact {
+  display: none;
+  @media screen and (min-width: 481px) {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  @media screen and (min-width: 1201px) {
+    display: flex;
+
+    margin-left: auto;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+  &__item:not(:last-child) {
+    @media screen and (min-width: 481px) and (max-width: 1200px) {
+      margin-bottom: 5px;
+    }
+  }
+  &__item + &__item {
+    @media screen and (min-width: 1201px) {
+      margin-left: 50px;
+    }
+  }
+  &__link {
+    display: flex;
+    color: var(--second-color);
+    text-decoration: none;
+    transition: 250ms var(--timing-function);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    text-decoration: none;
+    color: var(--brand-color);
+  }
+}
