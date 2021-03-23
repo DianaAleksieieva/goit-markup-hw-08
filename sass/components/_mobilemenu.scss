@@ -3,7 +3,8 @@
   top: 0;
   left: 0;
   padding: 48px 40px;
-  // width: 480px;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   transform: translateX(100%);
   background-color: var(--white-color);
@@ -60,6 +61,9 @@
   &__social-list {
     font-size: 18px;
     display: flex;
+    @media screen and (max-width: 400px) {
+      flex-wrap: wrap;
+    }
   }
   &__social-link {
     color: var(--brand-color);
@@ -75,7 +79,7 @@
     transform: rotate(90deg);
   }
 }
-.is-open {
+.menu-container.is-open {
   transform: translateX(0);
 }
 //   &__social-item:hover,

@@ -1412,6 +1412,8 @@ header {
   top: 0;
   left: 0;
   padding: 48px 40px;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -1487,6 +1489,13 @@ header {
   display: flex;
 }
 
+@media screen and (max-width: 400px) {
+  .menu-container__social-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .menu-container__social-link {
   color: var(--brand-color);
   text-decoration: none;
@@ -1504,7 +1513,7 @@ header {
           transform: rotate(90deg);
 }
 
-.is-open {
+.menu-container.is-open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
