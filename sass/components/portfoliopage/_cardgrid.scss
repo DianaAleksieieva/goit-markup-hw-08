@@ -1,10 +1,11 @@
 /* Portfolio сетка */
 .card-grid {
-  // display: flex;
-  // flex-wrap: wrap;
-  // margin-left: calc(-1 * 30px);
-  // margin-top: calc(-1 * 30px);
-
+  @media screen and (min-width: 481px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * 30px);
+    margin-top: calc(-1 * 30px);
+  }
   &__picture {
     display: block;
     max-width: 100%;
@@ -13,18 +14,27 @@
   &__item {
     position: relative;
 
-    // flex-basis: calc(100% / 3 - var(--set-gap));
-    // margin-left: var(--set-gap);
-    // margin-top: var(--set-gap);
     border: 1px solid #eeeeee;
 
     transition: 250ms var(--timing-function);
     @media screen and (max-width: 480px) {
       margin-bottom: 30px;
     }
+    @media screen and (min-width: 481px) {
+      flex-basis: calc(100% / 2 - var(--set-gap));
+      margin-left: var(--set-gap);
+      margin-top: var(--set-gap);
+    }
+    @media screen and (min-width: 1201px) {
+      flex-basis: calc(100% / 3 - var(--set-gap));
+      margin-left: var(--set-gap);
+      margin-top: var(--set-gap);
+    }
   }
   &__item:first-child {
-    margin-top: 40px;
+    @media screen and (max-width: 480px) {
+      margin-top: 40px;
+    }
   }
   &__item:hover,
   &__item:focus {
@@ -80,7 +90,7 @@
   content: '';
   display: inline-block;
   width: 100%;
-  min-height: 294px;
+  height: 100%;
   top: 0;
   left: 0;
   background-color: var(--brand-color);

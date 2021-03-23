@@ -1225,15 +1225,31 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio__button-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
 }
 
 .portfolio__button-items:not(:last-child) {
   margin-right: 8px;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 481px) {
+  .portfolio__button-items:not(:last-child) {
+    margin-right: 8px;
+    margin-bottom: 30px;
+  }
 }
 
 .portfolio__button {
@@ -1263,6 +1279,18 @@ header {
 }
 
 /* Portfolio сетка */
+@media screen and (min-width: 481px) {
+  .card-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: calc(-1 * 30px);
+    margin-top: calc(-1 * 30px);
+  }
+}
+
 .card-grid__picture {
   display: block;
   max-width: 100%;
@@ -1281,8 +1309,28 @@ header {
   }
 }
 
-.card-grid__item:first-child {
-  margin-top: 40px;
+@media screen and (min-width: 481px) {
+  .card-grid__item {
+    -ms-flex-preferred-size: calc(100% / 2 - var(--set-gap));
+        flex-basis: calc(100% / 2 - var(--set-gap));
+    margin-left: var(--set-gap);
+    margin-top: var(--set-gap);
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .card-grid__item {
+    -ms-flex-preferred-size: calc(100% / 3 - var(--set-gap));
+        flex-basis: calc(100% / 3 - var(--set-gap));
+    margin-left: var(--set-gap);
+    margin-top: var(--set-gap);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-grid__item:first-child {
+    margin-top: 40px;
+  }
 }
 
 .card-grid__item:hover, .card-grid__item:focus {
@@ -1340,7 +1388,7 @@ header {
   content: '';
   display: inline-block;
   width: 100%;
-  min-height: 294px;
+  height: 100%;
   top: 0;
   left: 0;
   background-color: var(--brand-color);
@@ -1364,9 +1412,14 @@ header {
   top: 0;
   left: 0;
   padding: 48px 40px;
+  overflow: hidden;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   background-color: var(--white-color);
+  -webkit-transition: -webkit-transform 250ms var(--timing-function);
+  transition: -webkit-transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
 
 @media screen and (min-width: 481px) {

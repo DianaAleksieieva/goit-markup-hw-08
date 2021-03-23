@@ -4,11 +4,21 @@
 
   &__button-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
+    @media screen and (max-width: 480px) {
+      flex-wrap: wrap;
+      justify-content: left;
+    }
   }
+
   &__button-items:not(:last-child) {
     margin-right: 8px;
+    white-space: nowrap;
+
+    @media screen and (min-width: 481px) {
+      margin-right: 8px;
+      margin-bottom: 30px;
+    }
   }
 
   &__button {
