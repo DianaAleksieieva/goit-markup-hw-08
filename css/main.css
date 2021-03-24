@@ -655,7 +655,7 @@ header {
 
 @media screen and (max-width: 480px) {
   .modal {
-    height: 80vw;
+    height: 85vh;
   }
 }
 
