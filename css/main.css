@@ -655,7 +655,7 @@ header {
 
 @media screen and (min-width: 480px) {
   .modal {
-    width: 480px;
+    width: 450px;
     overflow: hidden;
   }
 }
@@ -663,8 +663,7 @@ header {
 @media screen and (min-width: 1201px) {
   .modal {
     top: 50%;
-    max-width: 528px;
-    min-height: 581px;
+    width: 528px;
     font-size: 14px;
   }
 }
