@@ -653,6 +653,12 @@ header {
   overflow-y: scroll;
 }
 
+@media screen and (max-width: 480px) {
+  .modal {
+    height: 80vw;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;

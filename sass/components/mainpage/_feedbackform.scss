@@ -21,8 +21,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--white-color);
-  // max-width: 450px;
-  // min-height: 609px;
+
   font-size: 12px;
   padding: 40px;
   width: 90vw;
@@ -30,6 +29,9 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   overflow-y: scroll;
+  @media screen and (max-width: 480px) {
+    height: 80vw;
+  }
   @media screen and (min-width: 480px) {
     width: 450px;
     overflow: hidden;
