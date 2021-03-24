@@ -5,7 +5,7 @@
   padding: 48px 40px;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: scroll;
   transform: translateX(100%);
   background-color: var(--white-color);
   transition: transform 250ms var(--timing-function);
