@@ -25,11 +25,15 @@
   // min-height: 609px;
   font-size: 12px;
   padding: 40px;
-  width: 100vw;
+  width: 90vw;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   overflow-y: scroll;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+    overflow: hidden;
+  }
   @media screen and (min-width: 1201px) {
     top: 50%;
     max-width: 528px;
